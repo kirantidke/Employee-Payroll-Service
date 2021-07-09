@@ -50,7 +50,14 @@ public class EmployeePayrollService {
 			return EmployeePayrollFileIOService.countEntries();
 		return 0;
 	}
-
+	
+	
+	    public void printData(IOService ioService){
+	        if (ioService.equals(IOService.FILE_IO)){
+	            new EmployeePayrollFileIOService().printDataFromFile();
+	        }
+	    }
+	   
 	public static void main(String[] args) {
 		ArrayList<EmployeePayrollData> employeePayrollDataList = new ArrayList<EmployeePayrollData>();
 		EmployeePayrollService employeePayrollService = new EmployeePayrollService(employeePayrollDataList);
