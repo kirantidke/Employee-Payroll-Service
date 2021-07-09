@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class EmployeePayrollService {
-
+	
 	private List<EmployeePayrollData> employeePayrollDataList = new ArrayList<>();
 
 	public EmployeePayrollService() {
@@ -22,7 +22,7 @@ public class EmployeePayrollService {
 		sc.nextLine();
 		System.out.println("Enter employee name: ");
 		String name = sc.nextLine();
-		System.out.println("Enetr Employee salary: ");
+		System.out.println("Eneter Employee salary: ");
 		double salary = sc.nextDouble();
 		employeePayrollDataList.add(new EmployeePayrollData(id, name, salary));
 
