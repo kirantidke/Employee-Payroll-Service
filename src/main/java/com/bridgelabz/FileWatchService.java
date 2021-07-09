@@ -25,7 +25,7 @@ public class FileWatchService {
 
 	private void scanAndRegisterDirectories(final Path start) throws IOException {
 		// register directories and sub-directories
-	
+
 		Files.walkFileTree(start, new SimpleFileVisitor<>() {
 			@Override
 			public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {
@@ -59,7 +59,7 @@ public class FileWatchService {
 						try {
 							scanAndRegisterDirectories(child);
 						} catch (IOException e) {
-							//  exception
+							// exception
 						}
 
 					} else if (kind.equals(ENTRY_DELETE)) {
